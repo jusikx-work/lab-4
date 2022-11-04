@@ -178,47 +178,8 @@ function aiming() {
 
 function fire() {
   
-
-  const R = 1;
-  const k = 8;
-  let angle =
-    Number(document.getElementById("Angle").value) * Math.PI / 180;
-  let v0 =
-    Number(document.getElementById("Velocity").value) / k;
-  const X0 = 2 + Math.floor(gunLength * Math.cos(angle));
-  const Y0 = Y - 100;
-  let t = 0;
-  let x = X0;
-  let y = Y0;
-
-  ctx.strokeStyle = "#FF0000";
-  ctx.lineWidth = 1;
-
-  while (true) {
-    x = Math.floor(X0 + v0 * Math.cos(angle) * t);
-    //y = Math.floor(Y0 - x * Math.tan(angle) + (g * x * x) / (2 * v0 * v0 * Math.cos(angle) * Math.cos(angle)));
-    y = Math.floor(
-
-      Y0 - x * Math.tan(angle) + (g * x * x) / (2 * v0 * v0 * Math.cos(angle) * Math.cos(angle))
-
-    );
-    if ((x > 0) && (x < X) && (y <= Y - relief[x])) {
-      ctx.beginPath();
-      ctx.arc(x, y, R, 0, 2 * Math.PI);
-    
-      ctx.closePath();
-      ctx.fill();
-      ctx.stroke();
-    }
-    t += 0.02;
-
-    if ((x >= enemyX - 10) && (x <= enemyX + 10) && (y >= Y - relief[enemyX] - 5) && (y <= Y - relief[enemyX] + 5)) {
-      alert("СЛАВА УКРАЇНІ !!! \n \n тут повинен лунати приспів з пісні «Арта» файного гурту «Пирятин»…");
-      break;
-    }
-
-    if ((x < 0) || (x > X) || (y > Y)) { break };
-  }
+  aiming();
+  
 }
 
 
