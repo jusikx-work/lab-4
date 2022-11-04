@@ -130,12 +130,7 @@ function aiming() {
       ctx.fill();
       ctx.stroke();
     }
-    t += 0.02;
-
-    if ((x >= enemyX - 10) && (x <= enemyX + 10) && (y >= Y - relief[enemyX] - 5) && (y <= Y - relief[enemyX] + 5)) {
-      alert("СЛАВА УКРАЇНІ !!! \n \n тут повинен лунати приспів з пісні «Арта» файного гурту «Пирятин»…");
-      break;
-    }
+    
 
     if ((x < 0) || (x > X) || (y > Y)) { break };
   }
