@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+     <meta charset="utf-8">
+     <link rel="stylesheet" href="styles.css" type="text/css">
+     <title> </title>
+   </head>
+   <body>
+    <header>
+      <script type="text/javascript" src="whowroteit.js">
+      </script>
+    </header>
+
+    <div class="Container">
+     <canvas id="Arta" width="800" height="600">
+       <script type="text/javascript" src="arta.js">
+       </script>
+     </canvas>
+    </div>
+
+    <div class="Container">
+     <div class="Control">
+      <button onclick="makeRelief(); drawRelief();">Рельєф</button>
+    </div>
+
+
+    <div class="Control">
+     <label angle="angleText">Кут: </label>
+     <input type="text" id="Angle" value="45" />
+    </div>
+
+
+    <div class="Control">
+     <label velocity="velocityText">Початкова швидкість (м/с): </label>
+     <input type="text" id="Velocity" value="800" />
+    </div>
+
+    <div class="Control">
+     <button onclick="aiming();">Прицілювання </button>
+    </div>
+
+    <div class="Control">
+     <button onclick="fire();">Fire! </button>
+    </div>
+    <div id="kut">
+      
+    </div>
+  </div>
+ </body>
+</html>
